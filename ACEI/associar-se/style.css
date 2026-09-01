@@ -1,0 +1,215 @@
+/* Hero da página de serviços */
+.hero-servicos {
+    background: linear-gradient(135deg, #dce8f2 0%, #b8cbd9 100%);
+    padding: 60px 0 70px;
+    border-bottom: 1px solid #cbd5e1;
+    text-align: center;
+}
+
+.hero-servicos-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 12px 0 8px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #1e293b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid de serviços */
+.servicos-lista {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.servico-item {
+    background-color: #f8fafc;
+    padding: 30px 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.servico-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border-color: #b8cbd9;
+}
+
+.servico-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.servico-item h3 {
+    font-size: 1.2rem;
+    color: #0f3b5e;
+    margin-bottom: 10px;
+}
+
+.servico-item p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Seção Associe-se (âncora) */
+.associe-se {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #f0f5fa 0%, #dce8f2 100%);
+    border-top: 1px solid #cbd5e1;
+    scroll-margin-top: 80px; /* Para compensar o header fixo */
+}
+
+.associe-se-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.associe-se-texto h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.associe-se-texto > p {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 24px;
+}
+
+.beneficios-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.beneficios-lista li {
+    padding: 8px 0;
+    font-size: 1rem;
+    color: #1e293b;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.beneficios-lista li:last-child {
+    border-bottom: none;
+}
+
+.beneficios-lista li::before {
+    content: "✓ ";
+    color: #0f3b5e;
+    font-weight: 700;
+}
+
+.contato-direto {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.contato-direto a {
+    color: #0f3b5e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contato-direto a:hover {
+    text-decoration: underline;
+}
+
+/* Placeholder para imagem */
+.associe-se-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-placeholder {
+    background-color: #e2e8f0;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #94a3b8;
+}
+
+.imagem-placeholder span {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.imagem-placeholder p {
+    color: #475569;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Adicione ao style.css */
+.nav-menu a.active {
+    color: #0f3b5e;
+    font-weight: 700;
+    border-bottom: 2px solid #0f3b5e;
+}
+
+.nav-menu a.active.btn-associado {
+    border-bottom: none;
+    background-color: #1a4f77;
+}
+
+/* Responsividade para a página de serviços */
+@media (max-width: 768px) {
+    .hero-servicos-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .associe-se-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .associe-se-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-placeholder {
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .imagem-placeholder span {
+        font-size: 3rem;
+    }
+}
