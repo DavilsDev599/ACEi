@@ -35,19 +35,35 @@ body {
   flex-wrap: wrap;
 }
 
+.logo {
+  display: flex;
+  flex-wrap: wrap; /* Permite que o subtítulo fique na linha de baixo */
+  align-items: center;
+  gap: 12px; /* Espaço entre a imagem e o texto ACEI */
+}
+
+.logo-nav {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}
+
 .logo h1 {
   font-size: 1.8rem;
   font-weight: 700;
   color: #0f3b5e;
   letter-spacing: -0.5px;
+  line-height: 1;
 }
 
 .logo-sub {
+  width: 100%; /* Força o subtítulo a ir para a linha de baixo */
   display: block;
   font-size: 0.7rem;
   font-weight: 500;
   color: #475569;
   letter-spacing: 0.3px;
+  margin-top: 4px;
 }
 
 .nav-menu ul {
@@ -81,6 +97,22 @@ body {
   background-color: #1a4f77 !important;
 }
 
+.btn-associarse {
+  background-color: white;
+  color: #0f3b5e !important;
+  border: 1px solid;
+  border-color: #0f3b5e;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.btn-associarse:hover {
+  color: white !important;
+  background-color: #0f3b5e !important;
+  border-color: white;
+}
+
 .menu-toggle {
   display: none;
   background: none;
@@ -90,106 +122,131 @@ body {
   color: #0f3b5e;
 }
 
-/* Hero */
+
+/* Hero com Imagem de Fundo (Full Banner) */
 .hero {
-  background: linear-gradient(135deg, #e8f0f7 0%, #d4e2ed 100%);
-  padding: 60px 0 80px;
+  position: relative;
+  /* Imagem com máscara escura por cima para dar leitura nos textos */
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+  url('assets/algodao.jpeg') center/cover no-repeat;
+  padding: 100px 0 120px;
   border-bottom: 1px solid #cbd5e1;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.hero-text {
+  max-width: 750px; /* Limita a largura do texto para legibilidade */
 }
 
 .hero-badge {
   display: inline-block;
-  background-color: #0f3b5e;
-  color: white;
-  padding: 4px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  backdrop-filter: blur(4px);
+  padding: 6px 18px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  align-self: flex-start;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.1;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 600;
-  color: #1e293b;
-  margin-top: 4px;
+  color: #f1f5f9;
+  margin-top: 8px;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #334155;
-  max-width: 600px;
-  margin-top: 16px;
+  color: #e2e8f0;
+  margin-top: 20px;
 }
 
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 28px;
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
+/* Ajuste dos botões sobre o fundo escuro */
+
+.hero .btn-primary {
+  background-color: #0f3b5e;
+  color: #ffffff !important;
+  border: 1px solid #0f3b5e;
+  padding: 8px 18px;
   border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
+  font-style: normal !important;
+  text-decoration: none !important;
   transition: all 0.2s;
-  font-size: 0.95rem;
 }
 
-.btn-primary {
-  background-color: #0f3b5e;
-  color: white;
+.hero .btn-primary:hover {
+  background-color: #1a4f77 !important;
+  border-color: #1a4f77;
 }
 
-.btn-primary:hover {
-  background-color: #1a4f77;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(15, 59, 94, 0.3);
+.hero .btn-outline {
+  background-color: #ffffff;
+  color: #0f3b5e !important;
+  border: 1px solid #0f3b5e;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-style: normal !important;
+  text-decoration: none !important;
+  transition: all 0.2s;
 }
 
-.btn-outline {
-  background-color: transparent;
+.hero .btn-outline:hover {
+  background-color: #0f3b5e !important;
+  color: #ffffff !important;
+  border-color: #0f3b5e;
+}
+.logo {
+  display: flex;
+  flex-wrap: wrap; /* Permite que o subtítulo fique na linha de baixo */
+  align-items: center;
+  gap: 12px; /* Espaço entre a imagem e o texto ACEI */
+}
+
+.logo-nav {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #0f3b5e;
-  border: 2px solid #0f3b5e;
+  letter-spacing: -0.5px;
+  line-height: 1;
 }
 
-.btn-outline:hover {
-  background-color: #0f3b5e;
-  color: white;
+.logo-sub {
+  width: 100%; /* Força o subtítulo a ir para a linha de baixo */
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #475569;
+  letter-spacing: 0.3px;
+  margin-top: 4px;
 }
-
-.btn-secondary {
-  background-color: #e2e8f0;
-  color: #0f3b5e;
-}
-
-.btn-secondary:hover {
-  background-color: #cbd5e1;
-}
-
-.btn-large {
-  padding: 16px 40px;
-  font-size: 1.1rem;
-}
-
 /* Cards de Destaque */
 .highlights {
   padding: 40px 0;
@@ -418,12 +475,21 @@ body {
 }
 
 .cta-final .btn-primary {
-  background-color: white;
-  color: #0f3b5e;
+  display: inline-block;
+  background-color: #ffffff !important;
+  color: #0f3b5e !important;
+  border: 2px solid #0f3b5e !important;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-style: normal !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
 }
 
 .cta-final .btn-primary:hover {
-  background-color: #f0f4f8;
+  background-color: #0f3b5e !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
