@@ -2,19 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+
+}
+
 
 body {
   font-family: 'Inter', sans-serif;
   color: #1e293b;
   line-height: 1.6;
-  background-color: #f8fafc;
+  background-color: #0f172a;
+  display: flex;             
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Força o conteúdo principal a empurrar o rodapé para o chão */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; /* MODIFICADO: Garante 20px de respiro nas pontas */
 }
 
 /* Cabeçalho */
@@ -32,6 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 /* Mantém o ícone ao lado do bloco de texto */
@@ -90,9 +106,10 @@ body {
 .nav-menu ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
-  padding-bottom: 8px;
+  padding-bottom:8px;
+  padding-right: 16px;
 }
 
 .nav-menu a {
@@ -562,12 +579,12 @@ body {
   padding: 32px 0;
   text-align: center;
   border-top: 1px solid #1e293b;
+  margin-bottom: 0 !important;
 }
-
 .footer-content p {
   font-size: 0.9rem;
+  margin-bottom: 0 !important; /* Zera qualquer margem padrão do parágrafo */
 }
-
 .footer-content p:first-child {
   font-weight: 500;
   color: #cbd5e1;
