@@ -34,6 +34,33 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+/* Container alinha logo à esquerda e nav à direita */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mantém o ícone ao lado do bloco de texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Organiza o título ACEI e o subtítulo um embaixo do outro */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-sub {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #475569;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
 
 .logo {
   display: flex;
@@ -121,6 +148,7 @@ body {
   cursor: pointer;
   color: #0f3b5e;
 }
+
 
 
 /* Hero com Imagem de Fundo (Full Banner) */
@@ -293,7 +321,25 @@ body {
 .card a:hover {
   text-decoration: underline;
 }
+.card a {
+  display: inline-block;
+  background-color: #0f3b5e;
+  color: #ffffff !important;
+  border: 1px solid #0f3b5e;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-style: normal !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
 
+.card a:hover {
+  background-color: #1a4f77 !important;
+  border-color: #1a4f77;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
 /* Seção Sobre */
 .about {
   padding: 60px 0;
@@ -343,7 +389,29 @@ body {
   font-size: 0.9rem;
   color: #475569;
 }
+.about .btn,
+.about .btn-primary,
+.about .btn-outline {
+  display: inline-block;
+  background-color: #ffffff !important;
+  color: #0f3b5e !important;
+  border: 2px solid #0f3b5e !important;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-style: normal !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
 
+.about .btn:hover,
+.about .btn-primary:hover,
+.about .btn-outline:hover {
+  background-color: #0f3b5e !important;
+  color: #ffffff !important;
+  border-color: #0f3b5e !important;
+  transform: translateY(-2px);
+}
 /* Notícias */
 .news {
   padding: 60px 0;
