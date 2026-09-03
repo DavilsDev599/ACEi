@@ -1,6 +1,6 @@
 # Site Institucional da ACIAGI
 
-Este é um projeto de site estático para a Associação Comercial, Industrial e Agrícola de Iguatu (ACIAGI), desenvolvido com HTML, CSS e JavaScript puros.
+Este é um projeto de site estático para a Associação Comercial e Empresarial de Iguatu (ACEI), desenvolvido com HTML, CSS e JavaScript.
 
 ## Visão Geral
 
